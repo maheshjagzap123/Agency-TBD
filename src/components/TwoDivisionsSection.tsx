@@ -3,18 +3,20 @@ import { ArrowRight, GraduationCap, Layers } from 'lucide-react'
 
 const sections = [
   {
-    title: 'Business Solutions',
+    label: 'BUSINESS OWNERS',
+    title: 'Want to Grow Your Business?',
     description:
-      'Custom websites, mobile apps, automation systems, CRM platforms, ERP solutions, AI-powered tools, and digital transformation services.',
+      'Get a professional website, mobile app, booking system, customer portal, billing software, inventory management system, CRM, ERP, or custom digital solution designed specifically for your business.',
     cta: 'Explore Business Solutions',
     icon: Layers,
     href: '#business',
   },
   {
-    title: 'Student Innovation Hub',
+    label: 'STUDENTS',
+    title: 'Working on Your Final Year Project?',
     description:
-      'Project mentoring, implementation guidance, documentation support, practical learning programs, deployment assistance, and career readiness services.',
-    cta: 'Explore Student Programs',
+      'Get project mentoring, implementation guidance, documentation assistance, technical support, deployment help, code walkthrough sessions, and practical learning resources.',
+    cta: 'Explore Student Innovation Hub',
     icon: GraduationCap,
     href: '#innovation',
   },
@@ -23,12 +25,7 @@ const sections = [
 export function TwoDivisionsSection() {
   return (
     <section id="divisions" className="section-container">
-      <div className="space-y-8 text-center">
-        <p className="text-sm uppercase tracking-[0.28em] text-violet-300/70">Two premier divisions</p>
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">Built for businesses and ambitious student innovators.</h2>
-      </div>
-
-      <div className="mt-12 grid gap-8 lg:grid-cols-2">
+      <div className="mt-0 grid gap-8 lg:grid-cols-2">
         {sections.map((item, index) => {
           const Icon = item.icon
           return (
@@ -43,6 +40,7 @@ export function TwoDivisionsSection() {
                 <Icon className="h-7 w-7" />
               </div>
               <div className="mt-8 space-y-4">
+                <p className="text-sm uppercase tracking-[0.28em] text-slate-400">{item.label}</p>
                 <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
                 <p className="max-w-xl text-sm leading-7 text-slate-300">{item.description}</p>
               </div>

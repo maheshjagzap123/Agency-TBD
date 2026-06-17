@@ -1,20 +1,61 @@
 import { motion } from 'framer-motion'
-import { BookOpen, Code2, Cpu, MonitorSmartphone, ShieldCheck, Zap } from 'lucide-react'
+import { BookOpen, Brain, Code2, Cpu, FileCode2, FlaskConical, ShieldCheck, Sparkles, TerminalSquare } from 'lucide-react'
 
 const projects = [
-  { title: 'AI & Machine Learning', label: '20+ Projects', icon: Cpu },
-  { title: 'Full Stack Java', label: '50+ Projects', icon: Code2 },
-  { title: 'Full Stack .NET', label: '50+ Projects', icon: ShieldCheck },
-  { title: 'Full Stack React', label: '20+ Projects', icon: Code2 },
-  { title: 'Full Stack Angular', label: '20+ Projects', icon: Code2 },
-  { title: 'Full Stack Python', label: '20+ Projects', icon: Code2 },
-  { title: 'Data Science', label: '20+ Projects', icon: Cpu },
-  { title: 'Data Analytics', label: '20+ Projects', icon: BookOpen },
-  { title: 'Software Testing', label: '20+ Projects', icon: ShieldCheck },
-  { title: 'Cloud & DevOps', label: 'Projects Available', icon: Zap },
-  { title: 'Mobile App Development', label: 'Projects Available', icon: MonitorSmartphone },
-  { title: 'IoT Projects', label: 'Projects Available', icon: Cpu },
-  { title: 'Cyber Security Projects', label: 'Projects Available', icon: ShieldCheck },
+  {
+    title: 'AI & Machine Learning',
+    label: '20+ Available Projects',
+    examples: ['Chatbots', 'Face Recognition', 'Recommendation Systems', 'Predictive Analytics'],
+    icon: Brain,
+  },
+  {
+    title: 'Full Stack .NET',
+    label: '50+ Available Projects',
+    examples: [],
+    icon: FileCode2,
+  },
+  {
+    title: 'Full Stack Java',
+    label: '50+ Available Projects',
+    examples: [],
+    icon: Code2,
+  },
+  {
+    title: 'Full Stack Python',
+    label: '20+ Available Projects',
+    examples: [],
+    icon: FlaskConical,
+  },
+  {
+    title: 'Full Stack React',
+    label: '20+ Available Projects',
+    examples: [],
+    icon: Sparkles,
+  },
+  {
+    title: 'Full Stack Angular',
+    label: '20+ Available Projects',
+    examples: [],
+    icon: TerminalSquare,
+  },
+  {
+    title: 'Data Science',
+    label: '20+ Available Projects',
+    examples: [],
+    icon: Cpu,
+  },
+  {
+    title: 'Data Analytics',
+    label: '20+ Available Projects',
+    examples: [],
+    icon: BookOpen,
+  },
+  {
+    title: 'Software Testing',
+    label: '20+ Available Projects',
+    examples: [],
+    icon: ShieldCheck,
+  },
 ]
 
 export function StudentInnovationSection() {
@@ -22,9 +63,9 @@ export function StudentInnovationSection() {
     <section id="innovation" className="section-container">
       <div className="space-y-4 text-center">
         <p className="text-sm uppercase tracking-[0.28em] text-cyan-300/80">Student Innovation Hub</p>
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">Build Industry-Ready Projects & Practical Skills</h2>
-        <p className="mx-auto max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-          Helping students transform concepts into real-world applications through mentoring, implementation guidance, documentation assistance, and practical learning experiences.
+        <h2 className="text-3xl font-semibold text-white sm:text-4xl">Build Better Projects. Learn Practical Skills.</h2>
+        <p className="mx-auto max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+          We help students transform ideas into complete project solutions while gaining practical knowledge and industry exposure.
         </p>
       </div>
 
@@ -45,6 +86,15 @@ export function StudentInnovationSection() {
               </div>
               <h3 className="mt-6 text-lg font-semibold text-white">{project.title}</h3>
               <p className="mt-3 text-sm text-slate-300">{project.label}</p>
+              {project.examples.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.examples.map((example) => (
+                    <span key={example} className="rounded-full bg-white/5 px-3 py-1 text-xs text-slate-300">
+                      {example}
+                    </span>
+                  ))}
+                </div>
+              )}
             </motion.div>
           )
         })}

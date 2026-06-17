@@ -1,30 +1,30 @@
 import { motion } from 'framer-motion'
-import { CheckCircle2, MonitorSmartphone, ServerCog, ShieldCheck, ShoppingCart, Zap } from 'lucide-react'
+import { CheckCircle2, MonitorSmartphone, ServerCog, ShieldCheck, Zap } from 'lucide-react'
 
 const categories = [
   {
-    title: 'Professional Business Websites',
-    features: ['Modern Business Website', 'Lead Generation', 'Service Showcase', 'Contact Management', 'SEO Ready'],
+    title: 'Professional Websites That Convert',
+    features: ['Modern business website', 'Lead generation flow', 'Service showcase', 'Contact and inquiry system', 'SEO-ready structure'],
     icon: MonitorSmartphone,
   },
   {
-    title: 'Business Management Systems',
-    features: ['Customer Management', 'Billing Systems', 'Inventory Tracking', 'Staff Management', 'Reporting Dashboards'],
+    title: 'Systems That Reduce Manual Work',
+    features: ['Customer management', 'Billing and invoicing', 'Inventory tracking', 'Staff coordination', 'Reporting dashboards'],
     icon: ServerCog,
   },
   {
-    title: 'Mobile Applications',
-    features: ['Customer Apps', 'Employee Apps', 'Delivery Apps', 'Booking Systems'],
+    title: 'Mobile Solutions for Daily Operations',
+    features: ['Customer apps', 'Booking and scheduling', 'Delivery tracking', 'Employee workflow tools', 'Better customer retention'],
     icon: MonitorSmartphone,
   },
   {
-    title: 'AI & Automation',
-    features: ['AI Chatbots', 'WhatsApp Automation', 'Lead Capture Systems', 'Business Insights', 'Workflow Automation'],
+    title: 'Automation for Faster Growth',
+    features: ['AI chatbots', 'WhatsApp automation', 'Lead capture', 'Business insights', 'Workflow optimization'],
     icon: Zap,
   },
   {
-    title: 'Enterprise Solutions',
-    features: ['CRM Platforms', 'ERP Systems', 'HR Management', 'Customer Portals', 'Internal Dashboards'],
+    title: 'Scalable Platforms for Future Growth',
+    features: ['CRM platforms', 'ERP systems', 'Customer portals', 'Internal dashboards', 'Long-term support'],
     icon: ShieldCheck,
   },
 ]
@@ -34,9 +34,9 @@ export function BusinessSolutions() {
     <section id="business" className="section-container">
       <div className="space-y-4 text-center">
         <p className="text-sm uppercase tracking-[0.28em] text-violet-300/80">Business Solutions</p>
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">Grow Your Business Digitally</h2>
-        <p className="mx-auto max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-          Enterprise-grade digital products, automation platforms, and growth systems designed to modernize your business operations and customer experience.
+        <h2 className="text-3xl font-semibold text-white sm:text-4xl">What We Build for Business Owners</h2>
+        <p className="mx-auto max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+          We help businesses attract more customers, automate daily operations, and create digital systems that support growth without adding complexity.
         </p>
       </div>
 

@@ -17,7 +17,7 @@ function HomePage() {
       <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-radial opacity-70" />
         <div className="section-container relative">
-          <div className="grid gap-12 lg:grid-cols-[1.16fr_0.84fr] lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -26,43 +26,43 @@ function HomePage() {
             >
               <div className="inline-flex items-center gap-3 rounded-full border border-violet-400/15 bg-white/5 px-4 py-2 text-sm text-slate-300 shadow-glow">
                 <span className="h-2.5 w-2.5 rounded-full bg-violet-400" />
-                Premium digital transformation for businesses and student innovators.
+                Digital growth agency + innovation hub
               </div>
 
               <div className="max-w-3xl space-y-6">
                 <h1 className="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl xl:text-6xl">
-                  Transform Ideas Into Digital Success
+                  Helping Businesses Grow Digitally & Helping Students Build Industry-Ready Projects
                 </h1>
-                <p className="max-w-xl text-lg leading-8 text-slate-300 sm:text-xl">
-                  We help businesses digitize operations, automate workflows, attract customers, and scale efficiently while empowering students with industry-grade project mentorship and innovation programs.
+                <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+                  Whether you are a business owner looking to increase customers and automate operations, or a student working on a final-year project, we provide the solutions, guidance, and support you need.
                 </p>
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="#contact"
+                  href="#business"
                   className="inline-flex items-center justify-center rounded-full bg-violet-500 px-6 py-4 text-sm font-semibold text-white transition hover:bg-violet-400"
                 >
-                  Book Free Consultation
+                  I Own a Business
                 </a>
                 <a
-                  href="#business"
+                  href="#innovation"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-4 text-sm font-semibold text-slate-100 transition hover:border-violet-400/40 hover:bg-white/10"
                 >
-                  Explore Our Solutions
+                  I Am a Student
                 </a>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div className="glass-panel rounded-[32px] p-6 shadow-glow">
-                  <p className="text-xs uppercase tracking-[0.24em] text-violet-300/80">Analytics</p>
-                  <h2 className="mt-4 text-xl font-semibold text-white">Intelligent dashboards</h2>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">Actionable business metrics for every stakeholder, from sales to support.</p>
+                  <p className="text-xs uppercase tracking-[0.24em] text-violet-300/80">For Businesses</p>
+                  <h2 className="mt-4 text-xl font-semibold text-white">More customers, smoother operations</h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">Websites, apps, bookings, CRM, ERP, inventory, and automation built for growth.</p>
                 </div>
                 <div className="glass-panel rounded-[32px] p-6 shadow-glow">
-                  <p className="text-xs uppercase tracking-[0.24em] text-cyan-300/80">Innovation</p>
-                  <h2 className="mt-4 text-xl font-semibold text-white">Student project showcases</h2>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">Real deliverables, system prototypes, and mentorship-driven product outcomes.</p>
+                  <p className="text-xs uppercase tracking-[0.24em] text-cyan-300/80">For Students</p>
+                  <h2 className="mt-4 text-xl font-semibold text-white">Projects that are practical and career-ready</h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">Mentorship, implementation support, documentation help, deployment guidance, and career prep.</p>
                 </div>
               </div>
             </motion.div>
@@ -78,28 +78,28 @@ function HomePage() {
                 <div className="absolute right-6 top-6 h-10 w-10 rounded-full bg-cyan-400/20 blur-2xl" />
                 <div className="space-y-5">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm uppercase tracking-[0.28em] text-slate-400">Live Preview</span>
-                    <span className="rounded-full bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.3em] text-cyan-300">SaaS Suite</span>
+                    <span className="text-sm uppercase tracking-[0.28em] text-slate-400">What we deliver</span>
+                    <span className="rounded-full bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.3em] text-cyan-300">Results</span>
                   </div>
                   <div className="rounded-[28px] border border-white/10 bg-surface/80 p-5 shadow-inner">
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="space-y-3 rounded-[28px] bg-gradient-to-br from-violet-500/15 to-transparent p-4">
-                        <p className="text-sm uppercase tracking-[0.25em] text-violet-200/70">Business</p>
-                        <span className="text-2xl font-semibold text-white">85%</span>
-                        <p className="text-sm text-slate-400">Workflow automation adoption</p>
+                        <p className="text-sm uppercase tracking-[0.25em] text-violet-200/70">Business Growth</p>
+                        <span className="text-2xl font-semibold text-white">+40%</span>
+                        <p className="text-sm text-slate-400">Potential customer reach</p>
                       </div>
                       <div className="space-y-3 rounded-[28px] bg-slate-950/40 p-4">
-                        <p className="text-sm uppercase tracking-[0.25em] text-cyan-200/70">Students</p>
-                        <span className="text-2xl font-semibold text-white">120+</span>
-                        <p className="text-sm text-slate-400">Mentored innovation projects</p>
+                        <p className="text-sm uppercase tracking-[0.25em] text-cyan-200/70">Student Success</p>
+                        <span className="text-2xl font-semibold text-white">100%</span>
+                        <p className="text-sm text-slate-400">Support from idea to delivery</p>
                       </div>
                     </div>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-3">
-                    {['Design', 'Launch', 'Scale'].map((label) => (
+                    {['Strategy', 'Build', 'Scale'].map((label) => (
                       <div key={label} className="rounded-3xl bg-slate-950/40 px-4 py-5 text-center">
                         <p className="text-sm uppercase tracking-[0.24em] text-slate-400">{label}</p>
-                        <p className="mt-3 text-2xl font-semibold text-white">Fast</p>
+                        <p className="mt-3 text-2xl font-semibold text-white">Ready</p>
                       </div>
                     ))}
                   </div>

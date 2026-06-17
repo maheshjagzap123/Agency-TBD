@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { Briefcase, GraduationCap, Menu, Sparkles, X } from 'lucide-react'
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { agencyName } from '../config'
 
 const navItems = [
@@ -25,7 +25,7 @@ function Header() {
       className="sticky top-0 z-50 border-b border-white/10 bg-surface/90 backdrop-blur-xl"
     >
       <div className="section-container flex items-center justify-between gap-4 py-1.5">
-        <a href="/" className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.28em] text-white">
+        <Link to="/" className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.28em] text-white">
           <motion.span
             animate={{ boxShadow: ['0 0 8px #7c3aed88', '0 0 18px #38bdf888', '0 0 8px #7c3aed88'] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -34,25 +34,35 @@ function Header() {
             <Sparkles className="h-3.5 w-3.5" />
           </motion.span>
           <span>{agencyName}</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => (
-            <motion.a
-              key={item.label}
-              href={item.href}
-              whileHover={{ y: -1 }}
-              className="relative text-sm text-slate-300 transition hover:text-white group"
-            >
-              {item.label}
-              <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-gradient-to-r from-violet-400 to-sky-400 transition-all duration-300 group-hover:w-full" />
-            </motion.a>
+            <motion.div key={item.label} whileHover={{ y: -1 }}>
+              {item.href.startsWith('#') ? (
+                <a
+                  href={item.href}
+                  className="relative text-sm text-slate-300 transition hover:text-white group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-gradient-to-r from-violet-400 to-sky-400 transition-all duration-300 group-hover:w-full" />
+                </a>
+              ) : (
+                <Link
+                  to={item.href}
+                  className="relative text-sm text-slate-300 transition hover:text-white group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-gradient-to-r from-violet-400 to-sky-400 transition-all duration-300 group-hover:w-full" />
+                </Link>
+              )}
+            </motion.div>
           ))}
         </nav>
 
         <div className="hidden items-center gap-2 xl:flex">
-          <a
-            href="/student"
+          <Link
+            to="/student"
             className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs transition ${
               location.pathname === '/student'
                 ? 'border-cyan-400 bg-cyan-400/10 text-cyan-300 hover:bg-cyan-400/15'
@@ -61,9 +71,9 @@ function Header() {
           >
             <GraduationCap className="h-3.5 w-3.5" />
             I'm a Student
-          </a>
-          <a
-            href="/business"
+          </Link>
+          <Link
+            to="/business"
             className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition shadow-lg ${
               location.pathname === '/business'
                 ? 'bg-violet-500 text-white shadow-violet-500/20 hover:bg-violet-400'
@@ -72,7 +82,7 @@ function Header() {
           >
             <Briefcase className="h-3.5 w-3.5" />
             For Business
-          </a>
+          </Link>
         </div>
 
         <div className="block lg:hidden">
@@ -95,8 +105,8 @@ function Header() {
             className="overflow-hidden border-t border-white/10 bg-surface/95 lg:hidden"
           >
             <div className="flex flex-col gap-3 px-4 py-4">
-              <a
-                href="/student"
+              <Link
+                to="/student"
                 onClick={() => setMenuOpen(false)}
                 className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition ${
                   location.pathname === '/student'
@@ -106,9 +116,9 @@ function Header() {
               >
                 <GraduationCap className="h-4 w-4" />
                 I'm a Student
-              </a>
-              <a
-                href="/business"
+              </Link>
+              <Link
+                to="/business"
                 onClick={() => setMenuOpen(false)}
                 className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
                   location.pathname === '/business'
@@ -118,7 +128,7 @@ function Header() {
               >
                 <Briefcase className="h-4 w-4" />
                 For Business
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
